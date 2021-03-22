@@ -6,7 +6,7 @@ import { UserComponent } from './user/user.component';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'user', component: UserComponent,
     children: [
     ],
@@ -15,6 +15,7 @@ const routes: Routes = [
     children: [
     ],
   },
+  { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
