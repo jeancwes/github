@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  serverUrl: 'https://api.github.com/'
+  serverUrl: 'https://api.github.com'
 };
 
 /*

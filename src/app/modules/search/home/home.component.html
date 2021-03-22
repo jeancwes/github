@@ -1,1 +1,7 @@
-<p>home works!</p>
+<section>
+    <form (ngSubmit)="search()">
+        <input type="text" name="search-input" id="search-input" [(ngModel)]="entitySearch">
+        <button type="submit">Buscar</button>
+    </form>
+    {{entity.login}}
+</section>

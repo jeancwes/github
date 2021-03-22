@@ -1,12 +1,16 @@
 .app-header {
     background-color: #006940;
-    height: 42px;
+    height: 40px;
     width: 100%;
 }
 
 .app-header__heading {
     color: #fff;
     float: left;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    vertical-align: middle;
 }
 
 .app-header__nav {
@@ -20,7 +24,10 @@
 
 .app-header__list-item {
     float: left;
-    padding: 10px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    vertical-align: middle;
 }
 
 .app-header__list-item-link {

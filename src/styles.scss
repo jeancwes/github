@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Merriweather', serif;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -18,7 +16,7 @@ body {
 
 h1, h2, h3 {
     margin: 0;
-    padding: 0 15px;
+    padding: 0;
 }
 
 ul {
@@ -54,7 +52,6 @@ table {
 table caption {
   color: #000;
   font-style: italic;
-  font-family: arial, sans-serif;
   padding: 1em 0;
   text-align: left;
 }
@@ -96,6 +93,7 @@ button:not(.link) {
   box-shadow: inset 0 1px 3px #ddd;
   box-sizing: border-box;
   display: inline-block;
+  font-family: 'Merriweather', serif;
   margin-top: 15px;
   padding: 0.5em;
   vertical-align: middle;

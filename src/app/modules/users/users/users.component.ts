@@ -21,7 +21,7 @@ export class UsersComponent implements OnInit {
   }
 
   getUsers() {
-    this.httpClient.get(environment.serverUrl + 'users')
+    this.httpClient.get(environment.serverUrl + '/users')
       .subscribe((response: []) => {
         console.log(response);
         if (response) {
