@@ -4,6 +4,12 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'search',
+    loadChildren: 
+      () => import('./modules/search/search-routing.module')
+        .then(m => m.SearchRoutingModule)
+  },
+  {
     path: 'user',
     loadChildren: 
       () => import('./modules/user/user-routing.module')

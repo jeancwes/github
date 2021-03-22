@@ -6,7 +6,25 @@
 
 .app-header__heading {
     color: #fff;
-    text-align: center;
+    float: left;
+}
+
+.app-header__nav {
+    float: right;
+}
+
+.app-header__list {
+    display: flex;
+    list-style: none;
+}
+
+.app-header__list-item {
+    float: left;
+    padding: 10px;
+}
+
+.app-header__list-item-link {
+    color: #fff;
 }
 
 .app-main {
