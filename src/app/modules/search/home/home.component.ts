@@ -9,8 +9,9 @@ import { environment } from '../../../../environments/environment';
 })
 export class HomeComponent implements OnInit {
 
-  public entity: any = {};
+  public entity: any;
   public entitySearch: string = '';
+  public isSearchPerformed: boolean = false;
 
   constructor(
     private httpClient: HttpClient
@@ -24,12 +25,18 @@ export class HomeComponent implements OnInit {
       return;
     }
 
+    this.isSearchPerformed = false;
+
     this.httpClient.get(`${environment.serverUrl}/users/${this.entitySearch}`)
       .subscribe((response: any) => {
         console.log(response);
         if (response) {
           this.entity = response;
         }
+        this.isSearchPerformed = true;
+      }, (response: any) => {
+        delete(this.entity);
+        this.isSearchPerformed = true;
       });
   }
 

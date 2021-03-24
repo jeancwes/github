@@ -4,14 +4,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { SearchModule } from './modules/search/search.module';
 import { UserModule } from './modules/user/user.module';
 import { UsersModule } from './modules/users/users.module';
 
+import { AppComponent } from './app.component';
+import { DialogComponent } from './components/dialog/dialog.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DialogComponent
   ],
   imports: [
     AppRoutingModule,

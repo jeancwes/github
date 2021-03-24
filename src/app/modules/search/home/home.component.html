@@ -1,7 +1,21 @@
-<section>
-    <form (ngSubmit)="search()">
-        <input type="text" name="search-input" id="search-input" [(ngModel)]="entitySearch">
-        <button type="submit">Buscar</button>
-    </form>
-    {{entity.login}}
-</section>
+<article class="search">
+    <section class="search-form">
+        <form (ngSubmit)="search()">
+            <input type="text" name="search-input" id="search-input" 
+                [(ngModel)]="entitySearch">
+            <button type="submit">Buscar Usuário</button>
+        </form>
+    </section>
+    <section class="search-result" *ngIf="entity && isSearchPerformed">
+        <h3>Usuário encontrado</h3>
+        <button type="button" class="search-result__link">
+            Ver resultado em diálogo
+        </button>
+        <button type="button" class="search-result__link">
+            Ver resultado em nova aba
+        </button>
+    </section>
+    <section class="search-result" *ngIf="!entity && isSearchPerformed">
+        <h3>Usuário não encontrado</h3>
+    </section>
+</article>
