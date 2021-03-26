@@ -1,7 +1,14 @@
-<section *ngIf="user">
-    <h2>Usuário {{userLogin}}</h2>
-    <h3>{{user.followers}}</h3>
-    <h3>{{user.following}}</h3>
-    <h3>{{user.email}}</h3>
-    <h3>{{user.bio}}</h3>
+<section *ngIf="user" class="user">
+    <div class="user__avatar">
+        <img class="user__avatar-image" src="{{user.avatar_url}}" alt="avatar">
+        <h3 class="user__username">{{userLogin}}</h3>
+    </div>
+    <div class="user__social">
+        <span class="user__social-info">Seguindo {{user.following}}</span>
+        <span class="user__social-info">Seguidores {{user.followers}}</span>
+        <span class="user__social-info" *ngIf="user.email">Email {{user.email}}</span>
+    </div>
+    <div class="user__personal">
+        <span class="user__personal-info">{{user.bio}}</span>
+    </div>
 </section>
