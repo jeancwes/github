@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class SearchComponent implements OnInit {
 
   public entity: any;
-  public entityId: any;
+  public entityLogin: any;
   public entitySearch: string = '';
   public isSearchPerformed: boolean = false;
   public opened: boolean = false;
@@ -36,7 +36,7 @@ export class SearchComponent implements OnInit {
         console.log(response);
         if (response) {
           this.entity = response;
-          this.entityId = response.id;
+          this.entityLogin = response.login;
         }
         this.isSearchPerformed = true;
       }, (response: any) => {
@@ -51,7 +51,7 @@ export class SearchComponent implements OnInit {
 
   openInPage() {
     const url = this.router.serializeUrl(
-      this.router.createUrlTree([`/user/user/${this.entityId}`])
+      this.router.createUrlTree([`/user/user/${this.entityLogin}`])
     );
 
     window.open(url, '_blank');

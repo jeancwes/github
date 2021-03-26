@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-user',
@@ -9,7 +10,9 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 })
 export class UserComponent implements OnInit {
 
-  @Input() userId: string;
+  @Input() userLogin: string;
+
+  public user: any;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -19,8 +22,31 @@ export class UserComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe((params: ParamMap) => {
-      this.userId = params.get('userId');
+      console.log('ParamMap');
+      if (!params.get('userLogin')) {
+        return;
+      }
+      this.userLogin = params.get('userLogin');
+      this.getUser();
     });
+  }
+
+  ngOnChanges(simpleChanges: SimpleChanges) {
+      console.log('SimpleChanges');
+      if (!simpleChanges.userLogin.currentValue) {
+        return;
+      }
+      this.getUser();
+  }
+
+  getUser() {
+    this.httpClient.get(`${environment.serverUrl}/users/${this.userLogin}`)
+      .subscribe((response: {}) => {
+        console.log(response);
+        if (response) {
+          this.user = response;
+        }
+      });
   }
 
 }

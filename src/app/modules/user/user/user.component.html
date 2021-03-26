@@ -1,1 +1,7 @@
-<h2>Usuário {{userId}}</h2>
+<section *ngIf="user">
+    <h2>Usuário {{userLogin}}</h2>
+    <h3>{{user.followers}}</h3>
+    <h3>{{user.following}}</h3>
+    <h3>{{user.email}}</h3>
+    <h3>{{user.bio}}</h3>
+</section>

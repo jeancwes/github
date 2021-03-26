@@ -3,14 +3,12 @@ import { CommonModule } from '@angular/common';
 
 import { UserRoutingModule } from './user-routing.module';
 
-import { HomeComponent } from './home/home.component';
 import { RepositoryComponent } from './repository/repository.component';
 import { UserComponent } from './user/user.component';
 
 
 @NgModule({
   declarations: [
-    HomeComponent, 
     RepositoryComponent, 
     UserComponent
   ],
@@ -19,7 +17,6 @@ import { UserComponent } from './user/user.component';
     UserRoutingModule
   ],
   exports: [
-    HomeComponent, 
     RepositoryComponent, 
     UserComponent
   ],

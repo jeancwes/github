@@ -10,7 +10,7 @@ import { environment } from '../../../../environments/environment';
 })
 export class UsersComponent implements OnInit {
 
-  public users: [] = [];
+  public users: any = [];
 
   constructor(
     private httpClient: HttpClient
@@ -22,7 +22,7 @@ export class UsersComponent implements OnInit {
 
   getUsers() {
     this.httpClient.get(environment.serverUrl + '/users')
-      .subscribe((response: []) => {
+      .subscribe((response: any) => {
         console.log(response);
         if (response) {
           this.users = response;
