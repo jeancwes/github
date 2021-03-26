@@ -1,7 +1,9 @@
 <section *ngIf="user" class="user">
     <div class="user__avatar">
-        <img class="user__avatar-image" src="{{user.avatar_url}}" alt="avatar">
-        <h3 class="user__username">{{userLogin}}</h3>
+        <a class="link" [href]="user.html_url" target="_blank">
+            <img class="user__avatar-image" src="{{user.avatar_url}}" alt="avatar">
+            <h3 class="user__avatar-username">{{userLogin}}</h3>
+        </a>
     </div>
     <div class="user__social">
         <span class="user__social-info">Seguindo {{user.following}}</span>
@@ -9,6 +11,7 @@
         <span class="user__social-info" *ngIf="user.email">Email {{user.email}}</span>
     </div>
     <div class="user__personal">
-        <span class="user__personal-info">{{user.bio}}</span>
+        <span class="user__personal-info"[innerHTML]="user.bio"></span>
     </div>
+    <app-repository [userLogin]="userLogin"></app-repository>
 </section>
