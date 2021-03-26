@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { UserRoutingModule } from './user-routing.module';
@@ -17,6 +17,12 @@ import { UserComponent } from './user/user.component';
   imports: [
     CommonModule,
     UserRoutingModule
-  ]
+  ],
+  exports: [
+    HomeComponent, 
+    RepositoryComponent, 
+    UserComponent
+  ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class UserModule { }

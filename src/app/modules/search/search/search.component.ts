@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../../environments/environment';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -10,12 +11,14 @@ import { environment } from '../../../../environments/environment';
 export class SearchComponent implements OnInit {
 
   public entity: any;
+  public entityId: any;
   public entitySearch: string = '';
   public isSearchPerformed: boolean = false;
   public opened: boolean = false;
 
   constructor(
-    private httpClient: HttpClient
+    private httpClient: HttpClient,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -33,6 +36,7 @@ export class SearchComponent implements OnInit {
         console.log(response);
         if (response) {
           this.entity = response;
+          this.entityId = response.id;
         }
         this.isSearchPerformed = true;
       }, (response: any) => {
@@ -41,11 +45,19 @@ export class SearchComponent implements OnInit {
       });
   }
 
-  openDialog() {
+  openInDialog() {
     this.opened = true;
   }
 
-  openedChange(event) {
-    this.opened = event;
+  openInPage() {
+    const url = this.router.serializeUrl(
+      this.router.createUrlTree([`/user/user/${this.entityId}`])
+    );
+
+    window.open(url, '_blank');
+  }
+
+  openedChange(opened) {
+    this.opened = opened;
   }
 }

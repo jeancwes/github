@@ -9,10 +9,11 @@
     <section class="search-result" *ngIf="entity && isSearchPerformed">
         <h3>Usuário encontrado</h3>
         <button type="button" class="search-result__link"
-            (click)="openDialog()">
+            (click)="openInDialog()">
             Ver resultado em diálogo
         </button>
-        <button type="button" class="search-result__link">
+        <button type="button" class="search-result__link"
+            (click)="openInPage()">
             Ver resultado em nova aba
         </button>
     </section>
@@ -21,4 +22,8 @@
     </section>
 </article>
 
-<app-dialog [opened]="opened" (openedChange)="openedChange($event)"></app-dialog>
+<app-dialog [opened]="opened" (openedChange)="openedChange($event)">
+    <app-dialog-content>
+        <app-user [userId]="entityId"></app-user>
+    </app-dialog-content>
+</app-dialog>

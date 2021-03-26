@@ -1,5 +1,5 @@
 <div class="dialog" *ngIf="opened" (click)="close()">
     <div class="dialog-content">
-        
+        <ng-content select="app-dialog-content"></ng-content>
     </div>
 </div>

@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { SearchRoutingModule } from './search-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { UserModule } from '../user/user.module';
 
 import { SearchComponent } from './search/search.component';
 
@@ -16,7 +17,8 @@ import { SearchComponent } from './search/search.component';
     CommonModule,
     FormsModule,
     SearchRoutingModule,
-    SharedModule
+    SharedModule,
+    UserModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
