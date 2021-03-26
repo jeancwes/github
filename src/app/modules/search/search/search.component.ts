@@ -3,15 +3,16 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../../environments/environment';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-search',
+  templateUrl: './search.component.html',
+  styleUrls: ['./search.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class SearchComponent implements OnInit {
 
   public entity: any;
   public entitySearch: string = '';
   public isSearchPerformed: boolean = false;
+  public opened: boolean = false;
 
   constructor(
     private httpClient: HttpClient
@@ -40,4 +41,11 @@ export class HomeComponent implements OnInit {
       });
   }
 
+  openDialog() {
+    this.opened = true;
+  }
+
+  openedChange(event) {
+    this.opened = event;
+  }
 }
