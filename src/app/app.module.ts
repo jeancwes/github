@@ -1,7 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+import { SearchModule } from './modules/search/search.module';
+import { UserModule } from './modules/user/user.module';
+import { UsersModule } from './modules/users/users.module';
+
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -9,9 +15,16 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
-    AppRoutingModule
+    CommonModule,
+    HttpClientModule,
+    SearchModule,
+    UserModule,
+    UsersModule
   ],
+  exports: [],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],
   bootstrap: [AppComponent]
 })

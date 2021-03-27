@@ -1,0 +1,38 @@
+.user {
+
+}
+
+.user__avatar {
+    float: left;
+    height: 200px;
+    width: 150px;
+}
+
+.user__avatar-image {
+    border-radius: 75px;
+    height: 150px;
+    width: 150px;
+}
+
+.user__avatar-username {
+    height: 50px;
+    width: 150px;
+}
+
+.user__social,
+.user__personal {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    width: calc( 100% - 150px );
+}
+
+.user__social-info{
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+.user__personal-info {
+    margin: 0 15px;
+}

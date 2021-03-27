@@ -1,0 +1,50 @@
+.app-header {
+    background-color: #006940;
+    height: 40px;
+    width: 100%;
+}
+
+.app-header__heading {
+    color: #fff;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    vertical-align: middle;
+}
+
+.app-header__nav {
+    float: left;
+}
+
+.app-header__list {
+    display: flex;
+    list-style: none;
+}
+
+.app-header__list-item {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    vertical-align: middle;
+}
+
+.app-header__list-item-link {
+    color: #fff;
+}
+
+.app-header__list-item--active {
+    background-color: #005027;
+}
+
+.app-main {
+    margin: 15px 0;
+    width: 100%;
+}
+
+.app-footer {
+    background-color: #006940;
+    height: 80px;
+    width: 100%;
+}

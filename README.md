@@ -1,27 +1,25 @@
-# Github
+# Projeto GitHub
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
+## Instalação do NodeJS
 
-## Development server
+Para rodar o projeto é necessário ter instalado o NodeJS.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Link para [download do NodeJS](https://nodejs.org/pt-br/)
 
-## Code scaffolding
+## Executar o projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Após instalar, acessar a pasta do projeto e executar os seguintes comandos.
 
-## Build
+$ npm install
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+$ npm install -g @angular/cli
 
-## Running unit tests
+$ ng serve --open
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+A aplicação ficará disponível na url base https://localhost:4200
 
-## Running end-to-end tests
+## Executar os testes
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Executar o seguinte comando.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+$ ng test

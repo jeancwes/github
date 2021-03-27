@@ -1,0 +1,8 @@
+<div class="dialog" *ngIf="opened">
+    <div class="dialog-content">
+        <div class="dialog-content-header">
+            <a href="javascript:;" (click)="close()">Fechar Diálogo</a>
+        </div>
+        <ng-content select="app-dialog-content"></ng-content>
+    </div>
+</div>
