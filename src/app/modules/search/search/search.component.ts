@@ -33,7 +33,6 @@ export class SearchComponent implements OnInit {
 
     this.httpClient.get(`${environment.serverUrl}/users/${this.entitySearch}`)
       .subscribe((response: any) => {
-        console.log(response);
         if (response) {
           this.entity = response;
           this.entityLogin = response.login;

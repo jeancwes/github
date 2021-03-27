@@ -21,7 +21,6 @@ export class RepositoryComponent implements OnInit {
   }
 
   ngOnChanges(simpleChanges: SimpleChanges) {
-    console.log('SimpleChanges');
     if (!simpleChanges.userLogin.currentValue) {
       return;
     }
@@ -31,7 +30,6 @@ export class RepositoryComponent implements OnInit {
   getUserRepositories() {
     this.httpClient.get(`${environment.serverUrl}/users/${this.userLogin}/repos`)
       .subscribe((response: []) => {
-        console.log(response);
         if (response) {
           this.repositories = this.sort(response);
         }

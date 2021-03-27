@@ -18,6 +18,8 @@ $ ng serve --open
 
 A aplicação ficará disponível na url base https://localhost:4200
 
+A aplicação de demonstração está disponível na url https://jeancwes.github.io/github/
+
 ## Executar os testes
 
 Executar o seguinte comando.
