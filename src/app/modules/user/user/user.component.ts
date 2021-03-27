@@ -21,7 +21,6 @@ export class UserComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe((params: ParamMap) => {
-      console.log('ParamMap');
       if (!params.get('userLogin')) {
         return;
       }
@@ -31,7 +30,6 @@ export class UserComponent implements OnInit {
   }
 
   ngOnChanges(simpleChanges: SimpleChanges) {
-      console.log('SimpleChanges');
       if (!simpleChanges.userLogin.currentValue) {
         return;
       }
@@ -41,7 +39,6 @@ export class UserComponent implements OnInit {
   getUser() {
     this.httpClient.get(`${environment.serverUrl}/users/${this.userLogin}`)
       .subscribe((response: {}) => {
-        console.log(response);
         if (response) {
           this.user = response;
         }

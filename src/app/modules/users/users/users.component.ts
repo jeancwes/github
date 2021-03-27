@@ -23,7 +23,6 @@ export class UsersComponent implements OnInit {
   getUsers() {
     this.httpClient.get(environment.serverUrl + '/users')
       .subscribe((response: any) => {
-        console.log(response);
         if (response) {
           this.users = response;
         }
