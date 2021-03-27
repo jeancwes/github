@@ -19,10 +19,14 @@
             <tbody>
                 <tr *ngFor="let user of users">
                     <td>
-                        {{user.login}}
+                        <a class="link" href="javascript:;" [routerLink]="['/user', user.login]">
+                            {{user.login}}
+                        </a>
                     </td>
                     <td>
-                        {{user.url}}
+                        <a class="link" [href]="user.html_url" target="_blank">
+                            {{user.html_url}}
+                        </a>
                     </td>
                 </tr>
             </tbody>

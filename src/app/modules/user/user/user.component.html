@@ -11,7 +11,7 @@
         <span class="user__social-info" *ngIf="user.email">Email {{user.email}}</span>
     </div>
     <div class="user__personal">
-        <span class="user__personal-info"[innerHTML]="user.bio"></span>
+        <div class="user__personal-info"[innerHTML]="user.bio"></div>
     </div>
     <app-repository [userLogin]="userLogin"></app-repository>
 </section>

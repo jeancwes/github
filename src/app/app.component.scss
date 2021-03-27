@@ -14,7 +14,7 @@
 }
 
 .app-header__nav {
-    float: right;
+    float: left;
 }
 
 .app-header__list {
@@ -32,6 +32,10 @@
 
 .app-header__list-item-link {
     color: #fff;
+}
+
+.app-header__list-item--active {
+    background-color: #005027;
 }
 
 .app-main {

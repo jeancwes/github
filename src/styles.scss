@@ -108,6 +108,10 @@ button:not(.link) {
   outline: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 label {
   display: inline-block;
   margin-top: 15px;

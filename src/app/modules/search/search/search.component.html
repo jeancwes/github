@@ -1,8 +1,8 @@
 <article class="search">
     <section class="search-form">
         <form (ngSubmit)="search()">
-            <input type="text" name="search-input" id="search-input" 
-                [(ngModel)]="entitySearch">
+            <input type="text" class="search-input" name="search-input" id="search-input" 
+                placeholder="Informe o nome do usuário..." [(ngModel)]="entitySearch">
             <button type="submit" class="search-button">Buscar Usuário</button>
         </form>
     </section>

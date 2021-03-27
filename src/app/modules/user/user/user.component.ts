@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
-import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import { environment } from '../../../../environments/environment';
 
 @Component({
@@ -16,8 +16,7 @@ export class UserComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private httpClient: HttpClient,
-    private router: Router
+    private httpClient: HttpClient
   ) { }
 
   ngOnInit(): void {

@@ -4,14 +4,16 @@
     </h1>
     <nav class="app-header__nav">
         <ul class="app-header__list">
-            <li class="app-header__list-item">
-                <a class="app-header__list-item-link" href="" [routerLink]="'/users'">
-                    Usuários
+            <li class="app-header__list-item"
+                routerLinkActive="app-header__list-item--active">
+                <a class="app-header__list-item-link" href="javascript:;" [routerLink]="'/users'">
+                    Lista de Usuários
                 </a>
             </li>
-            <li class="app-header__list-item">
-                <a class="app-header__list-item-link" href="" [routerLink]="'/search'">
-                    Busca Usuário
+            <li class="app-header__list-item"
+                routerLinkActive="app-header__list-item--active">
+                <a class="app-header__list-item-link" href="javascript:;" [routerLink]="'/search'">
+                    Buscar Usuário
                 </a>
             </li>
         </ul>
@@ -20,6 +22,4 @@
 <main class="app-main">
     <router-outlet></router-outlet>
 </main>
-<footer class="app-footer">
-    
-</footer>
+<footer class="app-footer"></footer>
